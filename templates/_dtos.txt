@@ -3,10 +3,12 @@ from pydantic import BaseModel
 from typing import Optional
 
 class Create${uname}Body(BaseModel):
-    email: str
-    password: str
+    # email: str
+    # password: str
+    pass
     
 class Update${uname}Body(BaseModel):
-    email: str
-    password: str
+    # email: str
+    # password: str
+    pass
     
