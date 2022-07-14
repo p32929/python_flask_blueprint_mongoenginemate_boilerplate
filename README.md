@@ -46,4 +46,9 @@ python main.py
 python generator.py
 ```
 
+## Run tests
+```
+python -m pytest
+```
+
 # Thanks
