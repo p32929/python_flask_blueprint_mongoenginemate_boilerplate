@@ -40,7 +40,6 @@ class Generate:
         # Update connector.py
         app_py = f"{self._script_dir}/src/connector.py"
         app_file = open(app_py, 'a+')
-        app_file.write("\n")
         app_file.write(
             f"\nfrom src.modules.{self.module_name}.{self.module_name}_controller import {self.module_name}_controller\n")
         app_file.write(
