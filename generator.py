@@ -40,8 +40,9 @@ class Generate:
         # Update connector.py
         app_py = f"{self._script_dir}/src/connector.py"
         app_file = open(app_py, 'a+')
+        app_file.write("\n")
         app_file.write(
-            f"from src.modules.{self.module_name}.{self.module_name}_controller import {self.module_name}_controller\n")
+            f"\nfrom src.modules.{self.module_name}.{self.module_name}_controller import {self.module_name}_controller\n")
         app_file.write(
             f"app.register_blueprint({self.module_name}_controller, url_prefix='/{self.module_name}s')\n")
         app_file.close()
