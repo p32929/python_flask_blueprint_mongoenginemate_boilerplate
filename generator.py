@@ -63,7 +63,7 @@ class Generate:
 
     def generate_files(self):
         print(f"Generating files for {self.module_name} module")
-        self._script_dir = os.path.dirname(__file__)
+        self._script_dir = os.path.dirname(__file__) or '.'
         self._rel_dir = f"{self._script_dir}/src/modules/{self.module_name}/"
         self._schema_dir = f"{self._script_dir}/src/schemas/"
         folder_created = self._create_module_folder()
