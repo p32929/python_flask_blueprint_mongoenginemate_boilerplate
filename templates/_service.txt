@@ -1,0 +1,28 @@
+from src.modules.${name}.${name}_dtos import Create${uname}Body, Update${uname}Body
+
+
+class ${uname}Service:
+
+    @staticmethod
+    def create(body: Create${uname}Body):
+        return f"create user"
+
+    @staticmethod
+    def get_one(id):
+        return "get one user"
+
+    @staticmethod
+    def get_all():
+        return "get all ${name}"
+
+    @staticmethod
+    def update_one(id, body: Update${uname}Body):
+        return "update one user "
+
+    @staticmethod
+    def delete_one(id):
+        return "delete one user"
+
+    @staticmethod
+    def delete_all():
+        return "delete all ${name}"

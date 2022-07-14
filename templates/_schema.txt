@@ -1,0 +1,10 @@
+import mongoengine as me
+from mongoengine_mate import ExtendedDocument
+
+
+class ${uname}Schema(ExtendedDocument):
+    name = me.StringField(required=True)
+
+    meta = {
+        "strict": False,
+    }

@@ -1,0 +1,39 @@
+from flask import Blueprint
+from flask_pydantic import validate
+from src.modules.${name}.${name}_service import ${uname}Service
+from src.modules.${name}.${name}_dtos import Create${uname}Body, Update${uname}Body
+from src.utils.responder import Responder
+
+${name}_controller = Blueprint('${name}s', __name__)
+
+
+@${name}_controller.post('/')
+@validate()
+def create(body: Create${uname}Body):
+    return ${uname}Service.create(body)
+
+@${name}_controller.get('/<id>')
+@validate()
+def get_one(id):
+    return ${uname}Service.get_one(id)
+
+@${name}_controller.get('/')
+@validate()
+def get_all():
+    return ${uname}Service.get_all()
+
+@${name}_controller.put('/<id>')
+@validate()
+def update_one(id, body: Update${uname}Body):
+    return ${uname}Service.update_one(id, body)
+
+@${name}_controller.delete('/<id>')
+@validate()
+def delete_one(id):
+    return ${uname}Service.delete_one(id)
+
+@${name}_controller.delete('/')
+@validate()
+def delete_all():
+    return ${uname}Service.delete_all()
+

@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  py_project1:
+    image: py_project1
+    container_name: py_project1
+    build: .
+    ports:
+      - "8000:8000"
+
+networks:
+  bm-network:
+    external: true
