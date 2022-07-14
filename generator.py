@@ -47,7 +47,7 @@ class Generate:
         app_file.close()
 
         # Schema
-        filename = f"{self.module_name}_schema.py",
+        filename = f"{self.module_name}_schema.py"
         target_filename = filename.split(
             "_")[-1].replace(".py", ".txt")
         target_filename = f"_{target_filename}"
