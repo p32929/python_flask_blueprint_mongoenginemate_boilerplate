@@ -66,6 +66,7 @@ class Generate:
         self._script_dir = os.path.dirname(__file__) or '.'
         self._rel_dir = f"{self._script_dir}/src/modules/{self.module_name}/"
         self._schema_dir = f"{self._script_dir}/src/schemas/"
+        
         folder_created = self._create_module_folder()
         if folder_created:
             self._create_module_files()
