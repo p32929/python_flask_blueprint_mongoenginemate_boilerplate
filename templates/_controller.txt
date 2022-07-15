@@ -11,36 +11,36 @@ ${name}_controller = Blueprint('${name}s', __name__)
 @${name}_controller.post('/')
 @openapi_docs()
 @validate()
-def create(body: Create${uname}Body):
+def create_${name}(body: Create${uname}Body):
     return ${uname}Service.create(body)
 
 @${name}_controller.get('/<id>')
 @openapi_docs()
 @validate()
-def get_one(id):
+def get_one_${name}(id):
     return ${uname}Service.get_one(id)
 
 @${name}_controller.get('/')
 @openapi_docs()
 @validate()
-def get_all():
+def get_all_${name}s():
     return ${uname}Service.get_all()
 
 @${name}_controller.put('/<id>')
 @openapi_docs()
 @validate()
-def update_one(id, body: Update${uname}Body):
+def update_one_${name}(id, body: Update${uname}Body):
     return ${uname}Service.update_one(id, body)
 
 @${name}_controller.delete('/<id>')
 @openapi_docs()
 @validate()
-def delete_one(id):
+def delete_one_${name}(id):
     return ${uname}Service.delete_one(id)
 
 @${name}_controller.delete('/')
 @openapi_docs()
 @validate()
-def delete_all():
+def delete_all_${name}s():
     return ${uname}Service.delete_all()
 
