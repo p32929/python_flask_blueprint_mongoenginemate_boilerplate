@@ -5,23 +5,23 @@ class ${uname}Service:
 
     @staticmethod
     def create(body: Create${uname}Body):
-        return f"create user"
+        return f"create ${uname}"
 
     @staticmethod
     def get_one(id):
-        return "get one user"
+        return "get one ${uname}"
 
     @staticmethod
     def get_all():
-        return "get all ${name}"
+        return "get all ${name}s"
 
     @staticmethod
     def update_one(id, body: Update${uname}Body):
-        return "update one user "
+        return "update one ${uname}"
 
     @staticmethod
     def delete_one(id):
-        return "delete one user"
+        return "delete one ${uname}"
 
     @staticmethod
     def delete_all():
