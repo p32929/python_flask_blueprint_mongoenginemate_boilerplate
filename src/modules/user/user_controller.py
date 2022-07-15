@@ -13,6 +13,7 @@ user_controller = Blueprint('users', __name__)
 
 
 @user_controller.get('/')
+@jwt_required()
 @openapi_docs()
 def get_users():
     users = UserService.get_all()
