@@ -3,6 +3,7 @@ from flask_cors import CORS
 from constants import Constants
 from src.connector import app
 from src.utils.database_utils import DatabaseUtils
+from src.app import jwt
 
 
 def run_server():
