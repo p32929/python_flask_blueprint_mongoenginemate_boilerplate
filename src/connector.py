@@ -12,7 +12,7 @@ app.config["JWT_SECRET_KEY"] = "super-secret"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(days=7)
 jwt = JWTManager(app)
 # openapi
-swagger = OpenAPI(endpoint="/swagger/", ui='swagger', name="swagger", extra_props={
+swagger = OpenAPI(endpoint="/docs/swagger/", ui='swagger', name="swagger", extra_props={
     "components": {
         "securitySchemes": {
             "bearerAuth": {
@@ -25,7 +25,7 @@ swagger = OpenAPI(endpoint="/swagger/", ui='swagger', name="swagger", extra_prop
     "security": [{"bearerAuth": []}]
 })
 swagger.register(app)
-redoc = OpenAPI(endpoint="/redoc/", ui='redoc', name="redoc")
+redoc = OpenAPI(endpoint="/docs/redoc/", ui='redoc', name="redoc")
 redoc.register(app)
 # BP REG
 app.register_blueprint(root_controller, url_prefix='/')
